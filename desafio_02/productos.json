@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"title": "Zapatillas",
+		"description": "altas",
+		"price": 35000,
+		"thumbnail": "https://media.istockphoto.com/id/1420765979/es/foto/nuevas-zapatillas-juveniles-de-moda-sobre-un-fondo-de-piedra.jpg?s=1024x1024&w=is&k=20&c=mKauzbk4a3_7Gr9Ve2RZN-BNZCS297o1wbi_mrWlckg=",
+		"code": "P001",
+		"stock": 50
+	},
+	{
+		"id": 2,
+		"title": "Remera",
+		"description": "estampada",
+		"price": 15000,
+		"thumbnail": "https://www.istockphoto.com/es/vector/dise%C3%B1o-de-camiseta-de-california-los-%C3%A1ngeles-dise%C3%B1o-de-estampado-de-camiseta-con-gm1326575447-411237126?phrase=remera+estampada",
+		"code": "P002",
+		"stock": 23
+	},
+	{
+		"id": 4,
+		"title": "Campera",
+		"description": "de jean, corte oversize",
+		"price": 30000,
+		"thumbnail": "https://www.istockphoto.com/es/foto/chaqueta-jean-aislada-sobre-blanco-vistas-delanteras-y-traseras-listo-para-el-trazado-gm1352728757-428055334?phrase=campera",
+		"code": "P004",
+		"stock": 12
+	},
+	{
+		"id": 5,
+		"title": "mochila",
+		"description": "para computadora",
+		"price": 40000,
+		"thumbnail": "https://www.istockphoto.com/es/foto/en-la-escuela-gm176778805-10339224?phrase=mochila+para+computadora",
+		"code": "P005",
+		"stock": 10
+	}
+]
