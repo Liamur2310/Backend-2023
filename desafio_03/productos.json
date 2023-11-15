@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": 2,
 		"title": "Zapatillas",
 		"description": "altas",
 		"price": 35000,
@@ -9,16 +9,16 @@
 		"stock": 50
 	},
 	{
-		"id": 2,
-		"title": "Remera",
-		"description": "estampada",
-		"price": 15000,
-		"thumbnail": "https://www.istockphoto.com/es/vector/dise%C3%B1o-de-camiseta-de-california-los-%C3%A1ngeles-dise%C3%B1o-de-estampado-de-camiseta-con-gm1326575447-411237126?phrase=remera+estampada",
-		"code": "P002",
-		"stock": 23
+		"id": 4,
+		"title": "Pantalon",
+		"description": "corte chino",
+		"price": 36000,
+		"thumbnail": "https://www.istockphoto.com/es/foto/pantalones-aislados-sobre-fondo-blanco-pantalones-colgantes-pantalones-chino-gm1294103843-388221174?phrase=pantalon+",
+		"code": "P003",
+		"stock": 19
 	},
 	{
-		"id": 4,
+		"id": 5,
 		"title": "Campera",
 		"description": "de jean, corte oversize",
 		"price": 30000,
@@ -27,7 +27,7 @@
 		"stock": 12
 	},
 	{
-		"id": 5,
+		"id": 6,
 		"title": "mochila",
 		"description": "para computadora",
 		"price": 40000,
@@ -36,12 +36,12 @@
 		"stock": 10
 	},
 	{
-		"id": 1,
-		"title": "Pantalon",
-		"description": "corte chino",
-		"price": 36000,
-		"thumbnail": "https://www.istockphoto.com/es/foto/pantalones-aislados-sobre-fondo-blanco-pantalones-colgantes-pantalones-chino-gm1294103843-388221174?phrase=pantalon+",
-		"code": "P003",
-		"stock": 19
+		"id": 7,
+		"title": "bla",
+		"description": "bla",
+		"price": 40000,
+		"thumbnail": "https://www.istockphoto.com/es/foto/en-la-escuela-gm176778805-10339224?phrase=mochila+para+computadora",
+		"code": "P006",
+		"stock": 100
 	}
 ]
