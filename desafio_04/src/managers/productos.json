@@ -1,0 +1,70 @@
+[
+	{
+		"id": 2,
+		"title": "Zapatillas",
+		"description": "altas",
+		"price": 35000,
+		"thumbnails": [
+			"https://media.istockphoto.com/id/1420765979/es/foto/nuevas-zapatillas-juveniles-de-moda-sobre-un-fondo-de-piedra.jpg?s=1024x1024&w=is&k=20&c=mKauzbk4a3_7Gr9Ve2RZN-BNZCS297o1wbi_mrWlckg="
+		],
+		"code": "P001",
+		"stock": 50
+	},
+	{
+		"id": 4,
+		"title": "Pantalon",
+		"description": "corte chino",
+		"price": 36000,
+		"thumbnails": [
+			"https://www.istockphoto.com/es/foto/pantalones-aislados-sobre-fondo-blanco-pantalones-colgantes-pantalones-chino-gm1294103843-388221174?phrase=pantalon+"
+		],
+		"code": "P003",
+		"stock": 19
+	},
+	{
+		"id": 5,
+		"title": "Campera",
+		"description": "de jean, corte oversize",
+		"price": 30000,
+		"thumbnails": [
+			"https://www.istockphoto.com/es/foto/chaqueta-jean-aislada-sobre-blanco-vistas-delanteras-y-traseras-listo-para-el-trazado-gm1352728757-428055334?phrase=campera"
+		],
+		"code": "P004",
+		"stock": 12
+	},
+	{
+		"id": 7,
+		"title": "mochila",
+		"description": "para computadora",
+		"price": 40000,
+		"thumbnails": [
+			"https://www.istockphoto.com/es/foto/en-la-escuela-gm176778805-10339224?phrase=mochila+para+computadora"
+		],
+		"code": "P005",
+		"stock": 10
+	},
+	{
+		"id": 8,
+		"title": "Intelligent Wooden Bacon",
+		"description": "bla bla",
+		"code": "a5fec1d2-8380-4efd-916b-172ab00823c7",
+		"price": 100,
+		"status": true,
+		"stock": 10,
+		"category": "Tasty Fresh Sausages",
+		"thumbnails": []
+	},
+	{
+		"id": 9,
+		"title": "nueva categoria",
+		"description": "bla bla",
+		"code": "dd011f14-db77-461b-a630-68c59ee9d9dd",
+		"price": 1000,
+		"status": true,
+		"stock": 100,
+		"category": "Ergonomic Metal Chair",
+		"thumbnails": [
+			"https://google.com"
+		]
+	}
+]
