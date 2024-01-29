@@ -1,0 +1,117 @@
+<!-- RealTimeProducts.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Products</title>
+</head>
+<body>
+
+<h1>Bienvenido usuario {{username}}</h1>
+
+<h2>Listado de productos</h2>
+<div id="productsListDiv">
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Código</th>
+                <th>Precio</th>
+                <th>Estado</th>
+                <th>Stock</th>
+                <th>Categoría</th>
+                <th>Thumbnails</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>{{this.title}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.code}}</td>
+                <td>{{this.price}}</td>
+                <td>{{this.status}}</td>
+                <td>{{this.stock}}</td>
+                <td>{{this.category}}</td>
+                <td>{{this.thumbnails}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+<h2>Formulario alta producto</h2>
+<div style="border: 1px solid black; padding: 5px;">
+    <form id="productForm" action="/api/products" method="post">
+        <label for="productTitle">Título:</label>
+        <input type="text" id="productTitle" name="title" required>
+        <br><br>
+        <label for="productDescription">Descripción:</label>
+        <input type="text" id="productDescription" name="description" required>
+        <br><br>
+        <label for="productCode">Código:</label>
+        <input type="text" id="productCode" name="code" required>
+        <br><br>
+        <label for="productPrice">Precio:</label>
+        <input type="text" id="productPrice" name="price" required>
+        <br><br>
+        <label for="productStock">Stock:</label>
+        <input type="text" id="productStock" name="stock" required>
+        <br><br>
+        <label for="productState">Estado:</label>
+        <select id="productState" name="status">
+            <option value="false">False</option>
+            <option value="true">True</option>
+        </select>
+        <br><br>
+        <label for="productCategory">Categoría:</label>
+        <input type="text" id="productCategory" name="category" required>
+        <br><br>
+        <button type="submit" id="addProductButton">Agregar Producto</button>
+    </form>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
+
+
+<!-- 
+<script>
+  const productForm = document.getElementById('productForm');
+  const productList = document.getElementById('real-time-products-list');
+
+function addProduct() {
+    console.log('Button clicked!'); // Verifica si este mensaje se muestra en la consola
+    const productName = document.getElementById('productName').value;
+    socket.emit('createProduct', { title: productName });
+}
+
+  // Escuchar actualizaciones de productos desde el servidor
+  socket.on('updateProducts', (data) => {
+    // Limpiar la lista
+    productList.innerHTML = '';
+
+    // Renderizar la nueva lista de productos
+    data.products.forEach((product) => {
+      const listItem = document.createElement('li');
+
+      listItem.innerHTML = `
+        <strong>${product.title}</strong><br>
+        Descripción: ${product.description}<br>
+        Precio: $${product.price}<br>
+        Stock: ${product.stock}<br>
+        <img src="${product.thumbnails[0]}" alt="${product.title}" width="100">
+        <hr>
+      `;
+
+      productList.appendChild(listItem);
+    });
+  });
+</script>
+  -->
