@@ -28,7 +28,7 @@ app.set("view engine", "hbs");
 // Middleware para manejar sesiones con connect-mongo
 const mongoStore = MongoStore.create({
   dbName: 'desafio_07',
-  mongoUrl: 'mongodb+srv://liamur:Romur2310@liamur.ew426gj.mongodb.net/?retryWrites=true&w=majority',
+  mongoUrl: 'mongodb+srv://liamur:*****@liamur.ew426gj.mongodb.net/?retryWrites=true&w=majority',
  // ttl: 10 * 60,
 });
 
@@ -64,7 +64,7 @@ app.set("views", path.join(__dirname, "views"));
 const productsManager = new ProductsManager(`${__dirname}/managers/productos.json`);
 
 // Conexión a MongoDB
-mongoose.connect('mongodb+srv://liamur:Romur2310@liamur.ew426gj.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true , dbName: 'desafio_07'})
+mongoose.connect('mongodb+srv://liamur:******@liamur.ew426gj.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true , dbName: 'desafio_07'})
 .then(() => {
     console.log('Conectado a MongoDB');
 
