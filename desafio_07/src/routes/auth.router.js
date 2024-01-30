@@ -2,6 +2,7 @@ import express from 'express';
 import bcrypt from 'bcrypt';
 import User from '../models/user.js'; 
 
+
 const router = express.Router();
 
 // Ruta para el formulario de login
@@ -21,10 +22,13 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.user = { 
-      email: user.email, 
-      role: user.role,
+      email: user.email,
+      username: user.username,
+      role: user.email === 'adminCoder@coder.com' ? 'admin' : 'usuario',
       name: user.name
     };
+
+    req.session.valid = true;
 
     res.redirect('/realtimeproducts'); 
     // Redirige a la vista de productos
@@ -36,12 +40,13 @@ router.post('/login', async (req, res) => {
 
 // Ruta para el formulario de registro
 router.get('/register', (req, res) => {
+  //agregar manejo de error
   res.render('register');
 });
 
 // Ruta para procesar el formulario de registro
 router.post('/register', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, username, password } = req.body;
 
   try {
     const existingUser = await User.findOne({ email });
@@ -57,11 +62,13 @@ router.post('/register', async (req, res) => {
       userRole = 'admin'
     }
 
-    const newUser = await User.create({
+ await User.create({
       email,
+      username,
       password: hashedPassword,
       role: userRole,
     });
+   
 
     res.redirect('/auth/login');
   } catch (error) {
