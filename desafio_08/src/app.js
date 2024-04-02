@@ -9,6 +9,9 @@ import viewsRouter from './routes/views.routes.js';
 import productsRouter from './routes/products.routes.js';
 import authRouter from './routes/auth.router.js';
 import path from 'path'; 
+import dotenv from 'dotenv';
+
+dotenv.config(); // Carga las variables de entorno desde el archivo .env 
 
 const app = express();
 
@@ -19,12 +22,16 @@ app.engine('hbs', handlebars.engine({
   layoutsDir: path.join(__dirname, 'views/layouts'), 
   partialsDir: path.join(__dirname, 'views/partials'),  
 }));
+
 app.set('views', path.join(__dirname, 'views')); 
 app.set('view engine', 'hbs');
 
 // Middleware para manejar sesiones con connect-mongo
 const mongoUrl = process.env.MONGODB_URL;
 
+console.log("_______")
+console.log(mongoUrl)
+console.log("_______")
 const connectMongoDB = async () => {
   try {
       await mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }); // Conecta a MongoDB
