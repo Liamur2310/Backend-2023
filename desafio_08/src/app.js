@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // Middleware para manejar sesiones con connect-mongo
-const mongoUrl = 'mongodb+srv://liamur:$2a$12$ZF5kKIfFM2d0RrQ492Yvd.7EiCNs2VX.Y9MH0.ITq7og9xkX6Jl3K@liamur.ew426gj.mongodb.net/?retryWrites=true&w=majority';
+const mongoUrl = process.env.MONGODB_URL;
 
 const connectMongoDB = async () => {
   try {

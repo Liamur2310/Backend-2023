@@ -10,10 +10,16 @@ import MongoStore from 'connect-mongo';
 import { Server } from 'socket.io';
 import authRouter from './routes/auth.router.js';
 import __dirname from "./utils.js";
+import bcrypt from 'bcrypt';
 
 
 const app = express();
 const PORT = 8081;
+
+//para generar el hash 
+export const createHash = password => bcrypt.hashSync(password,bcrypt.genSaltSync(10));  //el 10 es parte del encriptamiento , de saltos 
+export const isValidPassword = (user, password)=> bcrypt.compareSync(password, user.password);
+
 
 // Configuración del motor de plantillas
 app.engine("hbs", handlebars.engine({

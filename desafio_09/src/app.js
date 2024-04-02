@@ -41,7 +41,7 @@ connectMongoDB();
 
 const mongoStore = MongoStore.create({
   mongoUrl: mongoUrl,
-  dbName: 'desafio_08',
+  dbName: 'desafio_09',
 });
 
 // Configuración de express-session
